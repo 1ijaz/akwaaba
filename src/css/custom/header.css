@@ -1,0 +1,167 @@
+.main-header{
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    background-color: #fff;
+    box-shadow: 0px 0px 36.13333px 0px rgba(6, 28, 61, 0.05);
+    display: flex;
+    padding: 16px 103.822px 15px 84px;
+    align-items: center;
+}
+.logo{
+    color: #000;
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-size: 38px;
+}
+.main-header .menu ul{
+    list-style: none;
+    margin: 0;
+}
+.main-header .menu ul li{
+    float: left;
+    margin: 0 5px !important;
+}
+@media(min-width: 1200px){
+    .main-header .menu ul li{
+        float: left;
+        margin: 0 25px !important;
+    }
+  
+}
+.main-header .menu ul li div{
+    padding: 1px 5px !important;
+    color: #000;
+    text-transform: capitalize;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-style: normal;
+    transition: color .2s ease;
+    cursor: pointer;
+    text-decoration: none;
+    border-bottom: 2px solid #fff;
+}   
+.main-header .menu ul li div.active, .main-header .menu ul li:hover div{
+    border-bottom: 2px solid #E646B6;
+}
+
+
+
+/* ==================== Mobile menu ==================== */
+.mobile-menu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 300px;
+    padding: 0 30px !important;
+    max-width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 99;
+    border-radius: 0px;
+    transition: all 700ms ease;
+    -moz-transition: all 700ms ease;
+    -webkit-transition: all 700ms ease;
+    -ms-transition: all 700ms ease;
+    -o-transition: all 700ms ease;
+    -webkit-transform: translateX(101%);
+    -ms-transform: translateX(101%);
+    transform: translateX(101%);
+    background-color: #fff;
+    box-shadow: 0px 0px 36.13333px 0px rgba(6, 28, 61, 0.05);
+}
+
+
+.mobile-menu .menu-box {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #000;
+    padding: 0px 0px;
+    z-index: 5;
+    box-shadow: -9px 0 14px 0px rgb(0 0 0 / 6%);
+}
+.mobile-menu-visible .mobile-menu .close-btn {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+.mobile-menu .close-btn {
+    position: absolute;
+    right: 15px;
+    top: 8px;
+    line-height: 30px;
+    width: 35px;
+    text-align: center;
+    color: #000;
+    cursor: pointer;
+    z-index: 10;
+    -webkit-transition: all 0.9s ease;
+    -o-transition: all 0.9s ease;
+    transition: all 0.9s ease;
+}
+.mobile-menu .close-btn i{
+    font-size: 37px !important;
+}
+.mobile-menu .nav-logo {
+    position: relative;
+    padding: 30px 25px;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mobile-menu .navigation {
+    position: relative;
+    display: block;
+    width: 100%;
+    float: none;
+    margin-top: 40px !important;
+}
+
+.mobile-menu .navigation li {
+    position: relative;
+    display: block;
+    border-bottom: 1px solid #E9E9EB;
+    padding: 10px 12px !important;
+}
+.mobile-menu .navigation li > div {
+    position: relative;
+    display: block;
+    line-height: 24px;
+    padding: 10px 60px 10px 25px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+    text-transform: capitalize;
+    -webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    /* border-radius: 4px; */
+}
+.mobile-menu .navigation li > a:hover{
+    background-color: #000;
+    color: #000000;
+
+}
+.mobile-menu.mobile-menu-visible {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    transform: translateX(0%);
+}
+.mobile-menu.mobile-menu-visible .menu-box {
+    opacity: 1;
+    visibility: visible;
+}
